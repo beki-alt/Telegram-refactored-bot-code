@@ -298,11 +298,14 @@ def get_monthly_payments(eth_month: int, eth_year: int) -> List[Dict[str, Any]]:
     )
     return result.data or []
 
-
 def get_total_paid_this_month() -> int:
     """Return count of approved payments for the current Ethiopian month."""
     from utils import to_ethiopian, now_eth
-    eth_year, eth_month, _ = to_ethiopian(now_eth())
+
+    eth_date = to_ethiopian(now_eth())
+    eth_year = eth_date.year
+    eth_month = eth_date.month
+
     return len(get_monthly_payments(eth_month, eth_year))
 
 
