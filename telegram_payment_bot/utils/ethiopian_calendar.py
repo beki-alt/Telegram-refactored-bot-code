@@ -156,8 +156,14 @@ def format_eth_date(dt: datetime) -> str:
     Return a human-readable Ethiopian date string.
     Example: "25 መስከረም 2016"
     """
-    y, m, d = to_ethiopian(dt)
+    eth_date = to_ethiopian(dt)
+
+    y = eth_date.year
+    m = eth_date.month
+    d = eth_date.day
+
     return f"{d} {eth_month_name(m)} {y}"
+
 
 
 def format_eth_datetime(dt: datetime) -> str:
