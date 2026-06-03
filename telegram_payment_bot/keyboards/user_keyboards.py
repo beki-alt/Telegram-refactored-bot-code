@@ -9,7 +9,21 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMa
 
 from texts import T
 
+from telegram import KeyboardButton, ReplyKeyboardMarkup
 
+def contact_keyboard():
+    return ReplyKeyboardMarkup(
+        [
+            [
+                KeyboardButton(
+                    "📱 ስልክ ቁጥር አጋራ",
+                    request_contact=True
+                )
+            ]
+        ],
+        resize_keyboard=True,
+        one_time_keyboard=True,
+    )
 def main_menu_keyboard() -> ReplyKeyboardMarkup:
     """Persistent bottom keyboard shown on the main menu."""
     return ReplyKeyboardMarkup(
