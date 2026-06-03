@@ -115,7 +115,23 @@ def get_user(telegram_id: int) -> Optional[Dict[str, Any]]:
     result = _db().table("users").select("*").eq("telegram_id", telegram_id).execute()
     return result.data[0] if result.data else None
 
+def complete_user_registration(
+    telegram_id: int,
+    name: str,
+    phone: str,
+    username: str = None,
+):
+    result = _db().table("users").upsert(
+        {
+            "telegram_id": telegram_id,
+            "name": name,
+            "phone": phone,
+            "username": username,
+        },
+        on_conflict="telegram_id",
+    ).execute()
 
+    return result.data[0] if result.data else {}
 def get_all_users() -> List[Dict[str, Any]]:
     result = _db().table("users").select("*").order("joined_at").execute()
     return result.data or []
