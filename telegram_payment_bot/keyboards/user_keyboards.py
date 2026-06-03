@@ -9,7 +9,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMa
 
 from texts import T
 
-from telegram import KeyboardButton, ReplyKeyboardMarkup
+from telegram import KeyboardButton
 
 def contact_keyboard():
     return ReplyKeyboardMarkup(
