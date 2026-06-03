@@ -94,20 +94,33 @@ async def ping_supabase() -> None:
 
 # ── User operations ───────────────────────────────────────────────────────────
 
-def register_user(telegram_id: int, name: str) -> Dict[str, Any]:
-    """
-    Register a new user or return the existing record.
-    Safe to call on every /start — idempotent.
-    """
+def register_user(
+    telegram_id: int,
+    name: str,
+    phone: str,
+    username: str = None,
+) -> Dict[str, Any]:
+
     sb = _db()
-    existing = sb.table("users").select("*").eq("telegram_id", telegram_id).execute()
+
+    existing = (
+        sb.table("users")
+        .select("*")
+        .eq("telegram_id", telegram_id)
+        .execute()
+    )
+
     if existing.data:
         return existing.data[0]
+
     result = sb.table("users").insert({
         "telegram_id": telegram_id,
         "name": name,
+        "phone": phone,
+        "username": username,
         "status": "unpaid",
     }).execute()
+
     return result.data[0] if result.data else {}
 
 
@@ -153,7 +166,14 @@ def update_user_name(telegram_id: int, new_name: str) -> bool:
         "updated_at": datetime.utcnow().isoformat(),
     }).eq("telegram_id", telegram_id).execute()
     return bool(result.data)
+  
+def update_user_phone(telegram_id: int, phone: str) -> bool:
+    result = _db().table("users").update({
+        "phone": phone,
+        "updated_at": datetime.utcnow().isoformat(),
+    }).eq("telegram_id", telegram_id).execute()
 
+    return bool(result.data)
 
 def update_user_status(telegram_id: int, status: str) -> bool:
     """status must be 'paid' or 'unpaid'."""
