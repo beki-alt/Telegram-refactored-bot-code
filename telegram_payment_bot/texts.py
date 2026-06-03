@@ -55,11 +55,11 @@ class T:
     # ──────────────────────────────────────────────────────────────────────────
     #  PROFILE
     # ──────────────────────────────────────────────────────────────────────────
-    PROFILE_HEADER = "👤 *የእኔ መገለጫ*"
+    PROFILE_HEADER = "👤 *የኔ ፕሮፋይል"
     PROFILE_NAME   = "📛 ስም"
     PROFILE_TG_ID  = "🆔 Telegram ID"
     PROFILE_STATUS = "📊 ሁኔታ"
-    PROFILE_JOINED = "📅 ተቀጥሮ"
+    PROFILE_JOINED = "📅 የክፊያ ቀን"
     PROFILE_ETH_SUFFIX = "(ዓ.ም)"
 
     STATUS_PAID   = "✅ ተከፍሏል"
@@ -77,7 +77,7 @@ class T:
 
     EDIT_NAME_PROMPT   = "✏️ *ስም ቀይር*\n\nአዲሱን ስምዎን ያስገቡ:"
     EDIT_NAME_TOO_SHORT = "❌ ስሙ ከ 2 እስከ 60 ፊደላት መሆን አለበት። እንደገና ያስገቡ:"
-    EDIT_NAME_SUCCESS  = "✅ ስምዎ ወደ *{name}* ተቀይሯል!"
+    EDIT_NAME_SUCCESS  = "✅ ስምዎ ወደ *{name}* ተቀይረዋል!"
 
     PROFILE_NOT_FOUND = "❌ ፕሮፋይልዎ አልተገኘም። /start ይጠቀሙ።"
 
@@ -90,7 +90,7 @@ class T:
     )
     PAYMENT_NO_BANK = (
         "⚠️ *የባንክ ሒሳብ አልተገኘም*\n\n"
-        "እባክዎ ቆይተው እንደገና ይሞክሩ። ወይም ድጋፍ ቡድኑን ያናግሩ።"
+        "እባክዎ ቆይተው እንደገና ይሞክሩ። ወይም የድጋፍ ቡድኑን ያናግሩ።"
     )
     PAYMENT_BANK_HEADER = "🏦 *የክፍያ ሒሳቦች:*\n\n"
     PAYMENT_BANK_ROW = (
@@ -100,12 +100,12 @@ class T:
     )
     PAYMENT_BANK_FOOTER = (
         "━━━━━━━━━━━━━━━\n"
-        "📸 *ክፍያ ፈጽመው ካበቁ, ደረሰኝ ፎቶ ያስቀምጡ።*\n"
+        "📸 *ክፍያ ፈጽመው ካበቁ, የደረሰኝ ፎቶ ያስቀምጡ።*\n"
         "_(ክፍያ ሳያደርጉ ለማቆም /cancel ያስገቡ)_"
     )
 
     PAYMENT_PHOTO_ONLY = (
-        "❌ *ፎቶ ብቻ ይቀበላሉ!*\n\nደረሰኝ ፎቶዎን ያስቀምጡ:"
+        "❌ *የደረሰኝ ፎቶ ብቻ ነው የምቀበለው!*\n\nደረሰኝ ፎቶዎን ያስቀምጡ:"
     )
     PAYMENT_SCREENSHOT_RECEIVED = (
         "📸 *ደረሰኝ ደርሶናል!*\n\n"
@@ -115,7 +115,7 @@ class T:
     BTN_CANCEL_PAYMENT  = "❌ ሰርዝ"
 
     PAYMENT_CANCELLED = (
-        "❌ *ክፍያ ተሰርዟል።*\n\nለማስቀጠል ዋናው ምናሌ ይጠቀሙ።"
+        "❌ *ክፍያ ተሰርዟል።*\n\nለማስቀጠል ዋናው menu ይጠቀሙ።"
     )
     PAYMENT_NO_CHANNEL = (
         "❌ *የደረሰኝ መቀበያ ቻናል አልተቀናበረም።*\n\nእባክዎ አስተዳዳሪን ያናግሩ።"
@@ -127,11 +127,11 @@ class T:
     )
     PAYMENT_SUCCESS = (
         "✅ *ደረሰኝዎ ተልኳል!*\n\n"
-        "አስተዳዳሪዎቹ ካረጋገጡ ሁኔታዎ ይዘምናል።\n"
-        "ትንሽ ቢጠብቁ ምስጋናዬ ነው! 🙏"
+        "አስተዳዳሪዎቹ ካረጋገጡ እናሳውቆታለን።\n"
+        "እናመሰግናለን ! 🙏"
     )
     PAYMENT_NO_PHOTO = "❌ ፎቶ አልተገኘም። እንደገና ይሞክሩ።"
-    BACK_TO_MENU = "ወደ ዋናው ምናሌ ተመልሰዋል።"
+    BACK_TO_MENU = "ወደ ዋናው menu ተመልሰዋል።"
 
     # Admin receipt caption
     RECEIPT_CAPTION = (
@@ -156,14 +156,14 @@ class T:
     SCHEDULE_LAST_DAY        = "🚨 ዛሬ የመጨረሻ ቀን ነው!"
     SCHEDULE_DAYS_TO_START   = "⏳ ክፍያ ለመጀመር {days} ቀናት ቀርተዋል"
     SCHEDULE_NEXT_END        = "የክፍያ ጊዜ {end}ኛ ቀን ያበቃል"
-    SCHEDULE_NEXT_START      = "ክፍያ {start}ኛ ቀን ይጀምራል"
+    SCHEDULE_NEXT_START      = "ክፍያ በ ቀን {start} ይጀምራል"
 
     # ──────────────────────────────────────────────────────────────────────────
     #  SUPPORT & HISTORY
     # ──────────────────────────────────────────────────────────────────────────
     SUPPORT_MENU_HEADER  = "📝 *ድጋፍ እና ታሪክ*\nምርጫዎን ያድርጉ:"
     BTN_PAYMENT_HISTORY  = "📋 የክፍያ ታሪክ"
-    BTN_CONTACT_SUPPORT  = "💬 ድጋፍ ቡድን ያናግሩ"
+    BTN_CONTACT_SUPPORT  = "💬 ድጋፍ ቡድን ለማናገር"
 
     HISTORY_HEADER       = "📋 *የክፍያ ታሪክ:*\n"
     HISTORY_EMPTY        = "📋 *የክፍያ ታሪክ*\n\nምንም ታሪክ አልተገኘም።"
@@ -188,7 +188,7 @@ class T:
     # ──────────────────────────────────────────────────────────────────────────
     #  ADMIN — GENERAL
     # ──────────────────────────────────────────────────────────────────────────
-    ADMIN_NOT_AUTHORIZED   = "⛔ ይህን ትዕዛዝ ለመጠቀም ፈቃድ የለዎትም።"
+    ADMIN_NOT_AUTHORIZED   = "⛔ ይህን ትዕዛዝ ለመጠቀም ፈቃድ የሎትም።"
     ADMIN_SUPER_ONLY       = "⛔ ይህ ትዕዛዝ ለዋና አስተዳዳሪ ብቻ ነው።"
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -197,12 +197,12 @@ class T:
     ADMIN_PANEL_HEADER = (
         "🔐 *የአስተዳዳሪ ፓነል*\n\n"
         "👥 ጠቅላላ ተጠቃሚዎች: *{total}*\n"
-        "✅ ይሄ ወር ከፍለዋል: *{paid}*\n\n"
-        "ከታቹ ምናሌ ምርጫዎን ያድርጉ:"
+        "✅ ይሄ ወር የከፈሉ: *{paid}*\n\n"
+        "ከታቹ menu ምርጫዎን ያድርጉ:"
     )
 
     BTN_ADM_MANAGE   = "🛡️ አስተዳዳሪ አስተዳደር"
-    BTN_ADM_SETTINGS = "⚙️ ስርዓት ቅንብሮች"
+    BTN_ADM_SETTINGS = "⚙️ ሴቲንግ"
     BTN_ADM_USERS    = "👥 ተጠቃሚ አስተዳደር"
     BTN_ADM_INBOX    = "📩 መልዕክቶች እና ደረሰኞች"
     BTN_ADM_REPORT   = "📊 የፋይናንስ ሪፖርት"
@@ -214,7 +214,7 @@ class T:
     MANAGE_HEADER      = "🛡️ *አስተዳዳሪ አስተዳደር*\nምርጫዎን ያድርጉ:"
     BTN_ADD_ADMIN      = "➕ አስተዳዳሪ ጨምር"
     BTN_REMOVE_ADMIN   = "➖ አስተዳዳሪ አስወግድ"
-    BTN_LIST_ADMINS    = "📋 አስተዳዳሪዎች ዝርዝር"
+    BTN_LIST_ADMINS    = "📋 የአስተዳዳሪዎች ዝርዝር"
 
     ADD_ADMIN_PROMPT   = "➕ *አስተዳዳሪ ጨምር*\n\nአዲሱን አስተዳዳሪ Telegram ID ያስገቡ:"
     ADD_ADMIN_INVALID  = "❌ ትክክለኛ ID ያስገቡ (ቁጥር ብቻ):"
@@ -226,7 +226,7 @@ class T:
     REMOVE_ADMIN_SUPER_ERROR = "❌ ዋና አስተዳዳሪን ማስወገድ አይቻልም።"
 
     LIST_ADMINS_HEADER = "📋 *አስተዳዳሪዎች ዝርዝር:*\n"
-    LIST_ADMINS_EMPTY  = "📋 አሁን ያሉ አስተዳዳሪዎች የሉም።"
+    LIST_ADMINS_EMPTY  = "📋 አስተዳዳርዎች የሉትም።"
     ADMIN_ROLE_SUPER   = "⭐ ዋና"
     ADMIN_ROLE_REGULAR = "🔑 ሁለተኛ"
 
@@ -241,7 +241,7 @@ class T:
     BTN_BILLING_CYCLE  = "📅 የክፍያ ዑደት"
     BTN_BANK_ACCOUNTS  = "🏦 የባንክ ሒሳብ"
 
-    EDIT_MSG_HEADER    = "✏️ *መልዕክቶችን አርትዕ*\nየትኛውን ማርትዕ ይፈልጋሉ?"
+    EDIT_MSG_HEADER    = "✏️ *መልዕክቶችን ማስተካከል*\nየትኛውን ማስተካከል ይፈልጋሉ?"
     EDIT_MSG_PROMPT    = (
         "✏️ *{label}*\n\n"
         "አሁን ያለው:\n```{current}```\n\n"
@@ -250,12 +250,12 @@ class T:
     EDIT_MSG_SUCCESS   = "✅ *{label}* ዘምኗል!"
     EDIT_MSG_TIMEOUT   = "❌ ሂደቱ ጊዜ አልፎታል። እንደገና ይሞክሩ።"
 
-    NOTIFY_HEADER      = "🔔 *ማሳወቂያ ቅንብሮች*\nለማብራት/ለማጥፋት ይምረጡ:"
-    NOTIFY_ON          = "🟢 ነቅቷል"
-    NOTIFY_OFF         = "🔴 ጠፍቷል"
+    NOTIFY_HEADER      = "🔔 *ማሳወቂያ መልክቶችን*\nለማብራት/ለማጥፋት ይምረጡ:"
+    NOTIFY_ON          = "🟢 በርቷል"
+    NOTIFY_OFF         = "🔴 ጠፊቷል"
 
     BILLING_CYCLE_HEADER = (
-        "📅 *የክፍያ ዑደት*\n\n"
+        "📅 *የክፍያ ግዜ*\n\n"
         "የጅምር ቀን: **{start}ኛ**\n"
         "የማብቂያ ቀን: **{end}ኛ**"
     )
@@ -270,18 +270,18 @@ class T:
     BANK_HEADER          = "🏦 *የባንክ ሒሳቦች*\n\n"
     BANK_NONE            = "ምንም ሒሳብ አልተጨመረም።\n\n"
     BANK_ROW             = "🏦 {bank_name}\n💳 {account_number}\n👤 {account_holder}\n\n"
-    BTN_ADD_BANK         = "➕ ሒሳብ ጨምር"
-    BANK_NAME_PROMPT     = "🏦 የባንኩን ስም ያስገቡ (ለምሳሌ: ቢሮ፣ ዳሸን ወዘተ):"
+    BTN_ADD_BANK         = "➕ account ለመጨመር"
+    BANK_NAME_PROMPT     = "🏦 የባንኩን ስም ያስገቡ (ለምሳሌ:ዳሸን):"
     BANK_ACCT_PROMPT     = "💳 የሒሳብ ቁጥሩን ያስገቡ:"
     BANK_HOLDER_PROMPT   = "👤 የሒሳብ ባለቤቱን ሙሉ ስም ያስገቡ:"
-    BANK_ADDED           = "✅ ሒሳብ ተጨምሯል!\n🏦 {bank_name}\n💳 {acct}\n👤 {holder}"
+    BANK_ADDED           = "✅ account ተጨምሯል!\n🏦 {bank_name}\n💳 {acct}\n👤 {holder}"
 
     # ──────────────────────────────────────────────────────────────────────────
     #  ADMIN — USER MANAGEMENT
     # ──────────────────────────────────────────────────────────────────────────
-    USERS_MENU_HEADER   = "👥 *ተጠቃሚ አስተዳደር*:"
+    USERS_MENU_HEADER   = "👥 *ተጠቃሚ ማስተዳደርያ*:"
     BTN_ALL_USERS       = "📋 ሁሉም ተጠቃሚዎች"
-    BTN_DEBTORS         = "❌ ያልከፈሉ (ዕዳ ያለባቸው)"
+    BTN_DEBTORS         = "❌ ያልከፈሉ"
     BTN_MANUAL_EDIT     = "✏️ ተጠቃሚ ማስተካከያ"
 
     USERS_ALL_HEADER    = "👥 *ሁሉም ተጠቃሚዎች ({count}):*\n"
@@ -291,9 +291,9 @@ class T:
     DEBTORS_HEADER      = "❌ *ያልከፈሉ ተጠቃሚዎች ({count}):*\n"
     DEBTORS_NONE        = "🎉 ሁሉም ተጠቃሚዎች ከፍለዋል!"
 
-    MANUAL_PROMPT_ID    = "✏️ *ተጠቃሚ ማስተካከያ*\n\nየተጠቃሚው Telegram ID ያስገቡ:"
+    MANUAL_PROMPT_ID    = "✏️ *ተጠቃሚ ማስተካከያ*\n\nየተጠቃሚውን የTelegram ID ያስገቡ:"
     MANUAL_INVALID_ID   = "❌ ትክክለኛ ID ያስገቡ:"
-    MANUAL_NOT_FOUND    = "❌ ይህ ተጠቃሚ አልተገኘም። ID እንደገና ያረጋግጡ:"
+    MANUAL_NOT_FOUND    = "❌ ይህ ተጠቃሚ አልተገኘም። IDውን እንደገና ያረጋግጡ:"
     MANUAL_USER_INFO    = (
         "👤 *ተጠቃሚ:* {name}\n"
         "🆔 ID: `{tg_id}`\n"
@@ -342,7 +342,7 @@ class T:
     NOTIFY_REJECTED = (
         "❌ *ክፍያዎ ተቀባይነት አላገኘም።*\n\n"
         "ምክንያት: {reason}\n\n"
-        "እባክዎ ትክክለኛ ደረሰኝ ፎቶ ልከው እንደገና ይሞክሩ።"
+        "እባክዎ እንደገና ይሞክሩ።"
     )
 
     SUPPORT_MSGS_NONE   = "✅ *ያልተመለሱ ጥያቄዎች የሉም።*"
@@ -350,7 +350,7 @@ class T:
     SUPPORT_MSG_ITEM    = "#{msg_id} — {name} (`{tg_id}`):\n_{message}_\n"
     BTN_REPLY_MSG       = "💬 #{msg_id} ምላሽ ስጥ"
     SUPPORT_REPLY_PROMPT = "💬 *ምላሽ ለ #{msg_id}*\n\nጥያቄ: _{message}_\n\nምላሽዎን ያስገቡ:"
-    SUPPORT_REPLY_SUCCESS = "✅ ምላሽ ተልኳል!"
+    SUPPORT_REPLY_SUCCESS = "✅ ምላሾ ተልኳል!"
     SUPPORT_REPLY_TO_USER = (
         "💬 *ከድጋፍ ቡድናችን ምላሽ:*\n\n"
         "_{reply}_\n\n"
@@ -358,12 +358,12 @@ class T:
     )
 
     BROADCAST_PROMPT    = (
-        "📣 *ለሁሉም ዑደቱ*\n\n"
+        "📣 *ለሁሉም የምላክ*\n\n"
         "ለሁሉም ተጠቃሚዎች ለመላክ ጽሑፍ ወይም ፎቶ ይላኩ:\n"
         "_(ለመሰረዝ /cancel ያስገቡ)_"
     )
     BROADCAST_SENDING   = "⏳ ወደ {count} ተጠቃሚዎች እየተላከ ነው..."
-    BROADCAST_DONE      = "✅ *ዑደቱ ተጠናቅቋል!*\n\n📨 ተልኳል: *{sent}*\n❌ አልተላከም: *{failed}*"
+    BROADCAST_DONE      = "✅ *ዑደቱ ተጠናቅቋል!*\n\n📨 የተላከላቸው: *{sent}*\n❌ በተለያዩ ምክንያቶች ያልተላከላቸው: *{failed}*"
 
     # ──────────────────────────────────────────────────────────────────────────
     #  ADMIN — REPORTS
@@ -372,7 +372,7 @@ class T:
     BTN_QUICK_REPORT    = "📊 ፈጣን ሪፖርት"
     BTN_PAYMENT_EXCEL   = "📥 የክፍያ ዝርዝር (Excel)"
     BTN_ATTEND_EXCEL    = "📋 የተሳታፊነት ሪፖርት (Excel)"
-    BTN_NOTIFY_UNPAID   = "📣 ያልከፈሉ ማሳወቅ"
+    BTN_NOTIFY_UNPAID   = "📣 ላልከፈሉ ማሳወቅያ"
 
     REPORT_PICK_MONTH    = "📊 *{title} — ወር ይምረጡ:*"
 
@@ -380,10 +380,10 @@ class T:
         "📊 *ፈጣን ሪፖርት — {month_name} {year} (ዓ.ም)*\n"
         "━━━━━━━━━━━━━━━━\n\n"
         "👥 ጠቅላላ ተጠቃሚዎች: *{total}*\n"
-        "✅ ከፍለዋል: *{paid}*\n"
-        "❌ አልከፈሉም: *{unpaid}*\n"
-        "⏳ በጥበቃ ላይ: *{pending}*\n"
-        "🚫 ተቀባይነት አላገኘም: *{rejected}*\n\n"
+        "✅ የከፈሉ: *{paid}*\n"
+        "❌ ያልከፈሉ: *{unpaid}*\n"
+        "⏳ በጥበቃ ላይ ያሉ: *{pending}*\n"
+        "🚫 ተቀባይነት ያላገኘ: *{rejected}*\n\n"
         "📈 የክፍያ መጠን: *{pct}%*\n"
         "`[{bar}]`"
     )
@@ -394,13 +394,13 @@ class T:
     EXCEL_CAPTION       = "📥 {fname}"
     EXCEL_ERROR         = "❌ ፋይሉን ማዘጋጀት አልተቻለም። እንደገና ይሞክሩ።"
 
-    NOTIFY_PICK_MONTH   = "📣 *ያሳወቅ — ወር ይምረጡ:*\n\nለምን ወር ያልከፈሉ ተጠቃሚዎች ማሳወቅ ይፈልጋሉ?"
+    NOTIFY_PICK_MONTH   = "📣 *የማሳወቅያ — ወር ይምረጡ:*\n\nለምን ወር ያልከፈሉ ተጠቃሚዎች ማሳወቅ ይፈልጋሉ?"
     NOTIFY_ALL_PAID     = "✅ *{month_name} {year} (ዓ.ም)*\n\nሁሉም ተጠቃሚዎች ለዚህ ወር ከፍለዋል! ምንም ማሳወቂያ አያስፈልግም።"
     NOTIFY_PREVIEW      = (
-        "📣 *{month_name} {year} (ዓ.ም) — ያሳወቅ ቅድሚያ ዕይታ*\n\n"
+        "📣 *{month_name} {year} (ዓ.ም) —  ቅድሚያ ዕይታ*\n\n"
         "❌ *{count} ተጠቃሚዎች* ለዚህ ወር ገና አልከፈሉም:\n\n"
         "{preview}\n\n"
-        "ማሳወቂያ ወደ ሁሉም ልካቸው?"
+        "ማሳወቂያ ወደ ሁሉም ይላክላቸው?"
     )
     BTN_CONFIRM_NOTIFY  = "📨 አዎ — {count} ሰዎች ላክ"
     BTN_CANCEL_NOTIFY   = "❌ ሰርዝ"
@@ -411,7 +411,7 @@ class T:
         "📨 ተልኳል:   *{sent}*\n"
         "❌ አልተላከም: *{failed}*"
     )
-    NOTIFY_NONE_UNPAID  = "✅ ሁሉም ተከፍሏል — ምንም ለማሳወቅ የለም።"
+    NOTIFY_NONE_UNPAID  = "✅ ሁሉም ከፊለዋል።"
 
     BTN_BACK_TO_REPORT  = "◀️ ወደ ሪፖርት ተመለስ"
 
@@ -422,19 +422,19 @@ class T:
         "📢 ውድ አባላት,\n\n"
         "የዚህ ወር የደንበኝነት ክፍያ ጊዜ ደርሷል! "
         "ከ{start_day} እስከ {end_day} ባለው ጊዜ ውስጥ ክፍያዎን እንዲፈጽሙ ጥሪ እናቀርባለን።\n\n"
-        "💳 ለክፍያ መመሪያ ዋናውን ምናሌ ይጠቀሙ።"
+        "💳 ለክፍያ መመሪያ ዋናውን menu ይጠቀሙ።"
     )
     DEFAULT_MSG_ONE_DAY = (
-        "⚠️ ትዝታ!\n\n"
-        "ነገ {end_day} የሚከፈለው የደንበኝነት ቀን ነው። "
-        "ገና ካልከፈሉ፣ ዛሬ ክፍያዎን ፈጽሙ!\n\n"
-        "💳 'ክፈል/አድስ' የሚለውን ምናሌ ይጠቀሙ።"
+        "⚠️ ውድ አባላቶች!\n\n"
+        "ነገ ማለትም {end_day} የመጨረሻ ቀን ነው። "
+        "ገና ካልከፈሉ፣ ዛሬ ክፍያዎን ይፈጽሙ!\n\n"
+        "💳 'ክፊያ ለመፈፀም' የሚለውን ከmenu ይጠቀሙ።"
     )
     DEFAULT_MSG_FINAL_DAY = (
         "🚨 የመጨረሻ ቀን!\n\n"
-        "ዛሬ {end_day} — የደንበኝነት ክፍያ የመጨረሻ ቀን ነው። "
+        "ዛሬ {end_day} — የመጨረሻ ቀን ነው። "
         "ገና ካልከፈሉ ወዲያውኑ ይፈጽሙ!\n\n"
-        "⏳ ዛሬ ከፈሱ አገልግሎቱ ይቋረጣል።"
+        " "
     )
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -444,17 +444,17 @@ class T:
         "📊 *የወር ዑደት ሪፖርት — {month_name} {year} (ዓ.ም)*\n"
         "━━━━━━━━━━━━━━━━━━\n\n"
         "👥 ጠቅላላ ተጠቃሚዎች:   *{total}*\n"
-        "✅ ክፍያ ፈጽመዋል:      *{paid}*\n"
-        "❌ አልከፈሉም:          *{unpaid}*\n"
+        "✅ ክፍያ የፈፀሙ:      *{paid}*\n"
+        "❌ ያልከፈሉ:          *{unpaid}*\n"
         "⏳ በጥበቃ ላይ:         *{pending}*\n"
-        "🚫 ተቀባይነት አላገኘም:  *{rejected}*\n\n"
+        "🚫 ተቀባይነት ያገኙ:  *{rejected}*\n\n"
         "📈 የክፍያ መጠን: *{pct}%*\n"
         "`[{bar}]`\n\n"
         "━━━━━━━━━━━━━━━━━━\n"
         "❌ *ያልከፈሉ ተጠቃሚዎች:*\n"
         "{unpaid_list}\n\n"
         "━━━━━━━━━━━━━━━━━━\n"
-        "🔄 *ሁሉም ተጠቃሚዎች ለአዲሱ ዑደት 'አልተከፈለም' ሆነዋል።*\n"
+        "🔄 *ሁሉም ተጠቃሚዎች ለአዲሱ ወር 'አልተከፈለም' ሆነዋል።*\n"
         "🕐 ዳግም ማስጀመሪያ ቀን: {reset_datetime} (ዓ.ም)"
     )
     CYCLE_UNPAID_ALL_PAID = "  _ሁሉም ተጠቃሚዎች ከፍለዋል!_ 🎉"
@@ -464,7 +464,7 @@ class T:
 # ── Editable message labels (keys → human-readable Amharic) ───────────────────
 EDITABLE_MESSAGES = {
     "msg_payment_start":  "📢 የክፍያ ጊዜ ጅምር መልዕክት",
-    "msg_reminder_one_day": "⏰ አንድ ቀን ቀረ ትዝታ",
+    "msg_reminder_one_day": "⏰ አንድ ቀን ቀረ መልዕክት",
     "msg_final_day":      "🚨 የመጨረሻ ቀን መልዕክት",
     "msg_approved":       "✅ ክፍያ ጸድቋል መልዕክት",
     "msg_rejected":       "❌ ክፍያ ተቀባይነት አላገኘም መልዕክት",
