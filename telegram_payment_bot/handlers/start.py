@@ -15,7 +15,8 @@ from texts import T
 
 logger = logging.getLogger(__name__)
 
-
+REGISTER_NAME = 0
+REGISTER_PHONE = 1
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Register the user (idempotent) and show the main menu."""
     tg_user = update.effective_user
