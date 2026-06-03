@@ -19,7 +19,7 @@ from .client import (
     get_all_users,
     get_unpaid_users,
     get_paid_users,
-    update_user_name,
+    update_user_name,update_user_phone,
     update_user_status,
     get_total_users_count,
     reset_all_users_to_unpaid,
@@ -62,7 +62,7 @@ from .client import (
 )
 
 __all__ = [
-    "init_tables", "ping_supabase",
+    "init_tables", "ping_supabase","update_user_phone",
     "register_user", "get_user", "get_all_users", "get_unpaid_users",
     "get_paid_users", "update_user_name", "update_user_status",
     "get_total_users_count", "reset_all_users_to_unpaid",
