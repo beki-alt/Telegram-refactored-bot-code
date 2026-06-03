@@ -1,4 +1,4 @@
-k"""
+"""
 texts.py
 ────────
 SINGLE SOURCE OF TRUTH for all Amharic (and mixed) UI strings.
