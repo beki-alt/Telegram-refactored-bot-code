@@ -1,0 +1,25 @@
+# Telegram bot
+python-telegram-bot==21.6
+
+# Database
+supabase==2.7.4
+
+# Calendar utilities
+ethiopian-date==1.0
+pytz
+
+# Web server (keep-alive + health check)
+flask==3.0.3
+
+# Background job scheduler
+apscheduler==3.10.4
+
+# Excel reports
+pandas==2.2.2
+openpyxl==3.1.2
+
+# Environment loading
+python-dotenv==1.0.1
+
+# HTTP client (used by supabase)
+httpx>=0.24.0
