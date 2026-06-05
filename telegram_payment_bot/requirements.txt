@@ -1,8 +1,0 @@
-python-telegram-bot[job-queue]==21.6
-supabase==2.6.0
-python-dotenv==1.0.1
-flask==3.0.3
-pytz==2024.1
-pandas==2.2.2
-openpyxl==3.1.5
-ethiopian-date==1.0
