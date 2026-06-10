@@ -14,12 +14,12 @@ class T:
 
     REGISTER_WELCOME_NEW = (
         "👋 *እንኳን ደህና መጡ, {name}!*\n\n"
-        "ይህ ቦት የደንበኝነት ክፍያዎን ለማስተዳደር ይረዳዎታል።\n\n"
+        "ይሄ ye chatolic ተማሪዎች የተጀመረው የ frinds ማህበር \nየ መረጃ አና የ ክፍያ bot ነው\n\n"
         "📱 ለመጀመር እባክዎ ስልክ ቁጥርዎን ያጋሩ:"
     )
     REGISTER_PHONE_PROMPT = (
         "📱 *ስልክ ቁጥር ያስፈልጋል*\n\n"
-        "እባክዎ ከታቹ ያለውን ቁልፍ ተጠቅሞ ስልክ ቁጥርዎን ያጋሩ:"
+        "እባክዎ ከታቹ ያለውን ቁልፍ ተጠቅመው ስልክ ቁጥርዎን ያጋሩ:"
     )
     REGISTER_PHONE_INVALID = (
         "❌ ስልክ ቁጥር አልደረሰም።\n"
@@ -40,8 +40,8 @@ class T:
     #  MAIN MENU BUTTONS
     # ──────────────────────────────────────────────────────────────────────────
     BTN_MY_PROFILE = "👤 የእኔ መገለጫ"
-    BTN_PAY_RENEW  = "💳 ክፈል / አድስ"
-    BTN_SCHEDULE   = "📅 የክፍያ መርሃ ግብር"
+    BTN_PAY_RENEW  = "💳 የክፊያ መፈፀምያ"
+    BTN_SCHEDULE   = "📅 የክፍያ ግዜ"
     BTN_SUPPORT    = "📝 ድጋፍ እና ታሪክ"
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -49,11 +49,11 @@ class T:
     # ──────────────────────────────────────────────────────────────────────────
     WELCOME = (
         "👋 *እንኳን ደህና መጡ, {name}!*\n\n"
-        "ይህ ቦት የደንበኝነት ክፍያዎን ለማስተዳደር ይረዳዎታል።\n"
-        "ከታቹ ምናሌ ምርጫዎን ያድርጉ:"
+        "ይሄ ye chatolic ተማሪዎች የተጀመረው የ frinds ማህበር \nየ መረጃ አና የ ክፍያ bot ነው።\n"
+        "ከታች menu ምርጫዎን ያድርጉ:"
     )
     UNKNOWN_COMMAND = (
-        "❓ ምርጫዎን ከምናሌ ያድርጉ።\n/start ብለው ምናሌ ያሳዩ።"
+        "❓ ምርጫዎን ከmenu ያድርጉ።menu ካልመጣሎት\n/start ብለው menu እንድታይ ያድርጉ።"
     )
     OPERATION_CANCELLED = "❌ *ሂደቱ ተሰርዟል።*"
 
@@ -65,8 +65,8 @@ class T:
     PROFILE_PHONE_LBL = "📱 ስልክ"
     PROFILE_TG_ID     = "🆔 Telegram ID"
     PROFILE_STATUS    = "📊 ሁኔታ"
-    PROFILE_JOINED    = "📅 ተቀጥሮ"
-    PROFILE_CYCLE_LBL = "📌 የክፍያ ዑደት"
+    PROFILE_JOINED    = "📅 የተቀላቀሉበት ቀን "
+    PROFILE_CYCLE_LBL = "📌 የክፍያ ግዜ"
     PROFILE_ETH_SUFFIX = "(ዓ.ም)"
 
     STATUS_PAID   = "✅ ተከፍሏል"
@@ -92,12 +92,12 @@ class T:
 
     EDIT_PHONE_PROMPT   = (
         "📱 *ስልክ ቁጥር ቀይር*\n\n"
-        "ከታቹ ያለውን ቁልፍ ተጠቅሞ አዲሱን ቁጥር ያጋሩ:"
+        "ከታቹ ያለውን ቁልፍ ተጠቅመው አዲሱን ቁጥር ያጋሩ:"
     )
     EDIT_PHONE_SUCCESS  = "✅ ስልክ ቁጥርዎ ወደ *{phone}* ተቀይሯል!"
     EDIT_PHONE_INVALID  = (
         "❌ ስልክ ቁጥር አልደረሰም።\n"
-        "እባክዎ ከታቹ ያለውን ቁልፍ ተጠቅሞ ያጋሩ:"
+        "እባክዎ ከታቹ ያለውን ቁልፍ ተጠቅመው ያጋሩ:"
     )
 
     PROFILE_NOT_FOUND = "❌ ፕሮፋይልዎ አልተገኘም። /start ይጠቀሙ።"
@@ -131,20 +131,20 @@ class T:
     )
 
     PAYMENT_PHOTO_ONLY = (
-        "❌ *ፎቶ ብቻ ይቀበላሉ!*\n\nደረሰኝ ፎቶዎን ያስቀምጡ:"
+        "❌ *እዝህ የደረሰኝ ፎቶ ብቻ ነው የምቀበለው!*\n\nደረሰኝ ፎቶዎን ያስቀምጡ:"
     )
     PAYMENT_SCREENSHOT_RECEIVED = (
         "📸 *ደረሰኝ ደርሶናል!*\n\n"
         "ደረሰኙን ወደ አስተዳዳሪ ቡድን ልኬዋለሁ ማለት ይፈልጋሉ?"
     )
-    BTN_CONFIRM_PAYMENT = "✅ ልኬዋለሁ, አረጋግጥ"
+    BTN_CONFIRM_PAYMENT = "✅ ልኬዋለሁ,አረጋግጡ"
     BTN_CANCEL_PAYMENT  = "❌ ሰርዝ"
 
     PAYMENT_CANCELLED = (
-        "❌ *ክፍያ ተሰርዟል።*\n\nለማስቀጠል ዋናው ምናሌ ይጠቀሙ።"
+        "❌ *ክፍያ ተሰርዟል።*\n\nለማስቀጠል ዋናው menu ይጠቀሙ።"
     )
     PAYMENT_NO_CHANNEL = (
-        "❌ *የደረሰኝ መቀበያ ቻናል አልተቀናበረም።*\n\nእባክዎ አስተዳዳሪን ያናግሩ።"
+        "❌ *የደረሰኝ መቀበያ ቻናል አልተቀናበረም።*\n\nእባክዎ አስተዳዳሪውን ያናግሩ።"
     )
     PAYMENT_SENDING = "⏳ ደረሰኝ ወደ አስተዳዳሪ ቡድን እየተላከ ነው..."
     PAYMENT_SEND_FAILED = (
