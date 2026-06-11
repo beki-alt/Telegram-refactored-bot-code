@@ -40,7 +40,7 @@ class T:
     #  MAIN MENU BUTTONS
     # ──────────────────────────────────────────────────────────────────────────
     BTN_MY_PROFILE = "👤 የእኔ መገለጫ"
-    BTN_PAY_RENEW  = "💳 የክፊያ መፈፀምያ"
+    BTN_PAY_RENEW  = "💳 ክፊያ ለመፈፀም"
     BTN_SCHEDULE   = "📅 የክፍያ ግዜ"
     BTN_SUPPORT    = "📝 ድጋፍ እና ታሪክ"
 
@@ -173,7 +173,7 @@ class T:
     SCHEDULE_MONTH   = "📆 ወር: *{month_name} {year} (ዓ.ም)*"
     SCHEDULE_CYCLE   = "📌 የክፍያ ግዜ: ከ*ቀን{start} — ቀን{end}*"
     SCHEDULE_USER_STATUS = "📊 የእርስዎ ሁኔታ: *{status}*"
-    SCHEDULE_NEXT    = "🔔 የቀጣይ ቀጣይ ወር ልጀምር: _{event}_"
+    SCHEDULE_NEXT    = "🔔 ቀጣይ : _{event}_"
     SCHEDULE_DIVIDER = "━━━━━━━━━━━━━━━"
 
     SCHEDULE_DAYS_LEFT     = "⏳ {days} ቀናት ቀርተዋል"
@@ -353,7 +353,7 @@ class T:
     DEBTORS_HEADER = "❌ *ያልከፈሉ ተጠቃሚዎች ({count}):*\n"
     DEBTORS_NONE   = "🎉 ሁሉም ተጠቃሚዎች ከፍለዋል!"
 
-    MANUAL_PROMPT_ID   = "✏️ *ተጠቃሚ ማስተካከያ*\n\nየተጠቃሚውን Telegram ID ያስገቡ:"
+    MANUAL_PROMPT_ID   = "✏️ *ተጠቃሚ ማስተካከያ*\n\nየተጠቃሚውን Telegram ID ያስገቡ:\nምናልባት ከየት እንደምወስዱ ካላወቁ \n የአስተዳዳሪ ፓነል->ተጠቃሚ ማስተዳደርያ->ሁሉም ተጠቃሚዎች ከዛcopy ያድርጉ"
     MANUAL_INVALID_ID  = "❌ ትክክለኛ ID ያስገቡ:"
     MANUAL_NOT_FOUND   = "❌ ይህ ተጠቃሚ አልተገኘም። ID እንደገና ያረጋግጡ:"
     MANUAL_USER_INFO   = (
@@ -376,9 +376,9 @@ class T:
     INBOX_HEADER         = "📩 *መልዕክቶች እና ደረሰኞች*\nምርጫዎን ያድርጉ:"
     BTN_PENDING_RECEIPTS = "📸 ያልተፈቀዱ ደረሰኞች"
     BTN_SUPPORT_INBOX    = "💬 ያልተመለሱ ጥያቄዎች"
-    BTN_BROADCAST        = "📣 ለሁሉም ዑደቱ"
+    BTN_BROADCAST        = "📣 ለሁሉም መልክት"
 
-    RECEIPTS_NONE   = "✅ *ያልተፈቀደ ደረሰኝ የለም።*\nሁሉም ዘምኗል!"
+    RECEIPTS_NONE   = "✅ *ያልተፈቀደ ደረሰኝ የለም።*!"
     RECEIPTS_HEADER = "📸 *ያልተፈቀዱ ደረሰኞች ({count}):*"
 
     RECEIPT_REVIEW_CAPTION = (
@@ -392,14 +392,14 @@ class T:
     BTN_REJECT  = "❌ አትቀበል"
 
     APPROVE_SUCCESS      = "✅ *ደረሰኝ #{payment_id} ጸድቋል!*\n\nተጠቃሚው ማሳወቂያ ተልኳል።"
-    REJECT_REASON_PROMPT = "❌ *ለምን አትቀበሉም?*\n\nምክንያቱን ያስገቡ:"
+    REJECT_REASON_PROMPT = "❌ *ለምን አይቀበሉም?*\n\nምክንያቱን ያስገቡ:"
     REJECT_SUCCESS       = "❌ *ደረሰኝ #{payment_id} ተቀባይነት አላገኘም።*"
 
     NOTIFY_APPROVED = (
-        "✅ *ክፍያዎ ተቀብሏል!*\n\n"
+        "✅ *ክፍያዎ ተቀባይነት አግኝቷል!*\n\n"
         "ስም: {name}\n"
         "ወር: {month} (ዓ.ም)\n\n"
-        "አመሰግናለሁ! አባልነትዎ ታድሷል። 🎉"
+        "እናመሰግናለን ውድ አባላችን ። 🎉"
     )
     NOTIFY_REJECTED = (
         "❌ *ክፍያዎ ተቀባይነት አላገኘም።*\n\n"
@@ -412,7 +412,7 @@ class T:
     SUPPORT_MSG_ITEM    = "#{msg_id} — {name} (`{tg_id}`):\n_{message}_\n"
     BTN_REPLY_MSG       = "💬 #{msg_id} ምላሽ ስጥ"
     SUPPORT_REPLY_PROMPT  = "💬 *ምላሽ ለ #{msg_id}*\n\nጥያቄ: _{message}_\n\nምላሽዎን ያስገቡ:"
-    SUPPORT_REPLY_SUCCESS = "✅ ምላሽ ተልኳል!"
+    SUPPORT_REPLY_SUCCESS = "✅ ምላሾ ተልኳል!"
     SUPPORT_REPLY_TO_USER = (
         "💬 *ከድጋፍ ቡድናችን ምላሽ:*\n\n"
         "_{reply}_\n\n"
@@ -420,12 +420,12 @@ class T:
     )
 
     BROADCAST_PROMPT = (
-        "📣 *ለሁሉም ዑደቱ*\n\n"
+        "📣 *ለሁሉም መልክት*\n\n"
         "ለሁሉም ተጠቃሚዎች ለመላክ ጽሑፍ ወይም ፎቶ ይላኩ:\n"
         "_(ለመሰረዝ /cancel ያስገቡ)_"
     )
     BROADCAST_SENDING = "⏳ ወደ {count} ተጠቃሚዎች እየተላከ ነው..."
-    BROADCAST_DONE    = "✅ *ዑደቱ ተጠናቅቋል!*\n\n📨 ተልኳል: *{sent}*\n❌ አልተላከም: *{failed}*"
+    BROADCAST_DONE    = "✅ *ህደቱ ተጠናቋል!*\n\n📨 የተላከላቸው: *{sent}*\n❌ ያልተላከላቸው: *{failed}*"
 
     # ──────────────────────────────────────────────────────────────────────────
     #  ADMIN — REPORTS
@@ -433,8 +433,8 @@ class T:
     REPORT_MENU_HEADER = "📊 *የፋይናንስ ሪፖርት*\nምርጫዎን ያድርጉ:"
     BTN_QUICK_REPORT   = "📊 ፈጣን ሪፖርት"
     BTN_PAYMENT_EXCEL  = "📥 የክፍያ ዝርዝር (Excel)"
-    BTN_ATTEND_EXCEL   = "📋 የተሳታፊነት ሪፖርት (Excel)"
-    BTN_NOTIFY_UNPAID  = "📣 ያልከፈሉ ማሳወቅ"
+    BTN_ATTEND_EXCEL   = "📋 full ሪፖርት (Excel)"
+    BTN_NOTIFY_UNPAID  = "📣 ላልከፈሉ ማሳወቅያ"
 
     REPORT_PICK_MONTH = "📊 *{title} — ወር ይምረጡ:*"
 
@@ -442,10 +442,10 @@ class T:
         "📊 *ፈጣን ሪፖርት — {month_name} {year} (ዓ.ም)*\n"
         "━━━━━━━━━━━━━━━━\n\n"
         "👥 ጠቅላላ ተጠቃሚዎች: *{total}*\n"
-        "✅ ከፍለዋል: *{paid}*\n"
-        "❌ አልከፈሉም: *{unpaid}*\n"
-        "⏳ በጥበቃ ላይ: *{pending}*\n"
-        "🚫 ተቀባይነት አላገኘም: *{rejected}*\n\n"
+        "✅ የከፈለ: *{paid}*\n"
+        "❌ ያልከፈሉ: *{unpaid}*\n"
+        "⏳ በጥበቃ ላይ ያሉ: *{pending}*\n"
+        "🚫 ተቀባይነት ያላገኙ: *{rejected}*\n\n"
         "📈 የክፍያ መጠን: *{pct}%*\n"
         "`[{bar}]`"
     )
@@ -456,13 +456,13 @@ class T:
     EXCEL_CAPTION      = "📥 {fname}"
     EXCEL_ERROR        = "❌ ፋይሉን ማዘጋጀት አልተቻለም። እንደገና ይሞክሩ።"
 
-    NOTIFY_PICK_MONTH = "📣 *ያሳወቅ — ወር ይምረጡ:*\n\nለምን ወር ያልከፈሉ ተጠቃሚዎች ማሳወቅ ይፈልጋሉ?"
+    NOTIFY_PICK_MONTH = "📣 *ለማሳውቅ — ወር ይምረጡ:*\n\nለምን ወር ያልከፈሉ ተጠቃሚዎች ማሳወቅ ይፈልጋሉ?"
     NOTIFY_ALL_PAID   = "✅ *{month_name} {year} (ዓ.ም)*\n\nሁሉም ተጠቃሚዎች ለዚህ ወር ከፍለዋል! ምንም ማሳወቂያ አያስፈልግም።"
     NOTIFY_PREVIEW    = (
-        "📣 *{month_name} {year} (ዓ.ም) — ያሳወቅ ቅድሚያ ዕይታ*\n\n"
+        "📣 *{month_name} {year} (ዓ.ም) — የአሳውቅ ቅድሚያ ዕይታ*\n\n"
         "❌ *{count} ተጠቃሚዎች* ለዚህ ወር ገና አልከፈሉም:\n\n"
         "{preview}\n\n"
-        "ማሳወቂያ ወደ ሁሉም ልካቸው?"
+        "ማሳወቂያ ወደ ሁሉም ልላክላቸው?"
     )
     BTN_CONFIRM_NOTIFY = "📨 አዎ — {count} ሰዎች ላክ"
     BTN_CANCEL_NOTIFY  = "❌ ሰርዝ"
@@ -470,10 +470,10 @@ class T:
     NOTIFY_DONE        = (
         "✅ *ማሳወቂያ ተልኳል!*\n\n"
         "📅 ወር: *{month_name} {year} (ዓ.ም)*\n"
-        "📨 ተልኳል:   *{sent}*\n"
-        "❌ አልተላከም: *{failed}*"
+        "📨 የተላከላቸው:   *{sent}*\n"
+        "❌ ያልተላከላቸው: *{failed}*"
     )
-    NOTIFY_NONE_UNPAID  = "✅ ሁሉም ተከፍሏል — ምንም ለማሳወቅ የለም።"
+    NOTIFY_NONE_UNPAID  = "✅ ሁሉም ከፊለዋል — ማንም ያልከፈለ የምናሳውቀው የለም።"
     BTN_BACK_TO_REPORT  = "◀️ ወደ ሪፖርት ተመለስ"
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -484,19 +484,19 @@ class T:
         "የዚህ ወር የደንበኝነት ክፍያ ጊዜ ደርሷል! "
         "ከ{month_name} {start_day} እስከ {end_month_name} {end_day} ባለው ጊዜ ውስጥ "
         "ክፍያዎን እንዲፈጽሙ ጥሪ እናቀርባለን።\n\n"
-        "💳 ለክፍያ መመሪያ ዋናውን ምናሌ ይጠቀሙ።"
+        "💳 ክፊያ ለመፈፀም ዋናውን menu ይጠቀሙ።"
     )
     DEFAULT_MSG_ONE_DAY = (
-        "⚠️ ትዝታ!\n\n"
-        "ነገ {end_month_name} {end_day} የሚከፈለው የደንበኝነት ቀን ነው። "
-        "ገና ካልከፈሉ፣ ዛሬ ክፍያዎን ፈጽሙ!\n\n"
-        "💳 'ክፈል/አድስ' የሚለውን ምናሌ ይጠቀሙ።"
+        "⚠️ አንድ ቀን ቀረው!\n\n"
+        "ነገ {end_month_name} {end_day} የመጨረሻ ቀን ነው። "
+        "ገና ካልከፈሉ፣ ዛሬ ክፍያዎን ይፈጽሙ!\n\n"
+        "💳 'ክፊያ መፈፀምያ' የሚለውን ከmenu ይጠቀሙ።"
     )
     DEFAULT_MSG_FINAL_DAY = (
         "🚨 የመጨረሻ ቀን!\n\n"
         "ዛሬ {end_month_name} {end_day} — የደንበኝነት ክፍያ የመጨረሻ ቀን ነው። "
-        "ገና ካልከፈሉ ወዲያውኑ ይፈጽሙ!\n\n"
-        "⏳ ዛሬ ካፈሱ አገልግሎቱ ይቋረጣል።"
+        "ገና ካልከፈሉ ወዲያውኑ ይክፈሉ!\n\n"
+        "⏳ ዛሬ የመጨረሻ ቀን ነው።"
     )
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -506,17 +506,17 @@ class T:
         "📊 *የወር ዑደት ሪፖርት — {month_name} {year} (ዓ.ም)*\n"
         "━━━━━━━━━━━━━━━━━━\n\n"
         "👥 ጠቅላላ ተጠቃሚዎች:   *{total}*\n"
-        "✅ ክፍያ ፈጽመዋል:      *{paid}*\n"
-        "❌ አልከፈሉም:          *{unpaid}*\n"
-        "⏳ በጥበቃ ላይ:         *{pending}*\n"
-        "🚫 ተቀባይነት አላገኘም:  *{rejected}*\n\n"
+        "✅ ክፍያ የፈፀሙ:      *{paid}*\n"
+        "❌ ያልከፈሉ:          *{unpaid}*\n"
+        "⏳ በጥበቃ ላይ ያሉ:         *{pending}*\n"
+        "🚫 ተቀባይነት ያላገኙ:  *{rejected}*\n\n"
         "📈 የክፍያ መጠን: *{pct}%*\n"
         "`[{bar}]`\n\n"
         "━━━━━━━━━━━━━━━━━━\n"
         "❌ *ያልከፈሉ ተጠቃሚዎች:*\n"
         "{unpaid_list}\n\n"
         "━━━━━━━━━━━━━━━━━━\n"
-        "🔄 *ሁሉም ተጠቃሚዎች ለአዲሱ ዑደት 'አልተከፈለም' ሆነዋል።*\n"
+        "🔄 *ሁሉም ተጠቃሚዎች ለአዲሱ ወር 'አልተከፈለም' ሆነዋል።*\n"
         "🕐 ዳግም ማስጀመሪያ ቀን: {reset_datetime} (ዓ.ም)"
     )
     CYCLE_UNPAID_ALL_PAID = "  _ሁሉም ተጠቃሚዎች ከፍለዋል!_ 🎉"
@@ -526,7 +526,7 @@ class T:
 # ── Editable message labels ────────────────────────────────────────────────────
 EDITABLE_MESSAGES = {
     "msg_payment_start":    "📢 የክፍያ ጊዜ ጅምር መልዕክት",
-    "msg_reminder_one_day": "⏰ አንድ ቀን ቀረ ትዝታ",
+    "msg_reminder_one_day": "⏰ አንድ ቀን ቀረ መልዕክት",
     "msg_final_day":        "🚨 የመጨረሻ ቀን መልዕክት",
     "msg_approved":         "✅ ክፍያ ጸድቋል መልዕክት",
     "msg_rejected":         "❌ ክፍያ ተቀባይነት አላገኘም መልዕክት",
