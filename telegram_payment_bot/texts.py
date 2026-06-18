@@ -1,4 +1,5 @@
 """
+hulunim Amharic strig ezih sir new maregew behuala endatresa beka
 texts.py
 ────────
 SINGLE SOURCE OF TRUTH for all Amharic (and mixed) UI strings.
