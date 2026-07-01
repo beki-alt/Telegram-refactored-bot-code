@@ -4,12 +4,14 @@ admin/users.py
 👥 User management — list users, view debtors, manually edit user status and name.
 
 FIX: State constants imported from states.py (globally unique integers 30-32).
+FIX: escape_markdown applied to u['name'] to prevent Telegram BadRequest crash.
 """
 
 import logging
 
 from telegram import Update
 from telegram.ext import ContextTypes, ConversationHandler
+from telegram.helpers import escape_markdown
 
 import database.client as db
 from admin.states import MANUAL_ACTION, MANUAL_NEW_NAME, MANUAL_USER_ID
@@ -41,7 +43,8 @@ async def users_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         lines = [T.USERS_ALL_HEADER.format(count=len(users))]
         for u in users[:50]:
             icon = "✅" if u["status"] == "paid" else "❌"
-            lines.append(f"{icon} {u['name']} — `{u['telegram_id']}`")
+            safe_name = escape_markdown(u["name"], version=1)
+            lines.append(f"{icon} {safe_name} — `{u['telegram_id']}`")
         if len(users) > 50:
             lines.append(T.USERS_ALL_MORE.format(n=len(users) - 50))
         await query.edit_message_text(
