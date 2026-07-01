@@ -466,7 +466,7 @@ def build_application() -> Application:
     app.add_handler(build_admin_conversation())
 
     # ─────────────────────────────────────────────
-    # 2. USERS CALLBACK (IMPORTANT FIX)
+    # 2. USERS CALLBACK FIX (THIS WAS MISSING)
     # ─────────────────────────────────────────────
     from telegram.ext import CallbackQueryHandler
     from admin.users import users_callback
@@ -479,7 +479,7 @@ def build_application() -> Application:
     )
 
     # ─────────────────────────────────────────────
-    # 3. START CONVERSATION (new users)
+    # 3. START CONVERSATION
     # ─────────────────────────────────────────────
     app.add_handler(build_start_conversation())
 
@@ -491,7 +491,7 @@ def build_application() -> Application:
     app.add_handler(build_support_conversation())
 
     # ─────────────────────────────────────────────
-    # 5. MAIN MENU BUTTONS (reply keyboard)
+    # 5. MAIN MENU (reply keyboard buttons)
     # ─────────────────────────────────────────────
     app.add_handler(
         MessageHandler(
