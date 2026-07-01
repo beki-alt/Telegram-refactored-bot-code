@@ -460,40 +460,71 @@ def build_application() -> Application:
         .build()
     )
 
-    # ── 1. Admin conversation (highest priority — registered first) ────────────
+    # ─────────────────────────────────────────────
+    # 1. ADMIN CONVERSATION (highest priority)
+    # ─────────────────────────────────────────────
     app.add_handler(build_admin_conversation())
 
-    # ── 2. Start conversation (phone collection for new users) ─────────────────
-    #   Must be registered BEFORE profile/payment conversations so /start is
-    #   caught here regardless of whether a user conversation is active.
+    # ─────────────────────────────────────────────
+    # 2. USERS CALLBACK (IMPORTANT FIX)
+    # ─────────────────────────────────────────────
+    from telegram.ext import CallbackQueryHandler
+    from admin.users import users_callback
+
+    app.add_handler(
+        CallbackQueryHandler(
+            users_callback,
+            pattern=r"^(adm_users|users_all|users_debtors|users_manual)$"
+        )
+    )
+
+    # ─────────────────────────────────────────────
+    # 3. START CONVERSATION (new users)
+    # ─────────────────────────────────────────────
     app.add_handler(build_start_conversation())
 
-    # ── 3. User conversations ──────────────────────────────────────────────────
+    # ─────────────────────────────────────────────
+    # 4. USER CONVERSATIONS
+    # ─────────────────────────────────────────────
     app.add_handler(build_profile_conversation())
     app.add_handler(build_payment_conversation())
     app.add_handler(build_support_conversation())
 
-    # ── 4. Main menu reply-keyboard buttons ────────────────────────────────────
-    app.add_handler(MessageHandler(
-        filters.Regex(rf"^{T.BTN_MY_PROFILE}$"), show_profile
-    ))
-    # NOTE: BTN_PAY_RENEW is handled by build_payment_conversation() entry points above.
-    # A standalone handler here would be dead code (the ConversationHandler catches it
-    # first with allow_reentry=True), so it is intentionally omitted.
-    app.add_handler(MessageHandler(
-        filters.Regex(rf"^{T.BTN_SCHEDULE}$"), payment_schedule
-    ))
-    app.add_handler(MessageHandler(
-        filters.Regex(rf"^{T.BTN_SUPPORT}$"), support_and_history
-    ))
+    # ─────────────────────────────────────────────
+    # 5. MAIN MENU BUTTONS (reply keyboard)
+    # ─────────────────────────────────────────────
+    app.add_handler(
+        MessageHandler(
+            filters.Regex(rf"^{T.BTN_MY_PROFILE}$"),
+            show_profile
+        )
+    )
 
-    # ── 5. Unknown text catch-all ──────────────────────────────────────────────
-    app.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND, handle_unknown
-    ))
+    app.add_handler(
+        MessageHandler(
+            filters.Regex(rf"^{T.BTN_SCHEDULE}$"),
+            payment_schedule
+        )
+    )
+
+    app.add_handler(
+        MessageHandler(
+            filters.Regex(rf"^{T.BTN_SUPPORT}$"),
+            support_and_history
+        )
+    )
+
+    # ─────────────────────────────────────────────
+    # 6. FALLBACK (UNKNOWN TEXT)
+    # ─────────────────────────────────────────────
+    app.add_handler(
+        MessageHandler(
+            filters.TEXT & ~filters.COMMAND,
+            handle_unknown
+        )
+    )
 
     return app
-
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
